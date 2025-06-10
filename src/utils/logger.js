@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 class Logger {
     static LOG_LEVELS = {
         ERROR: 0,
