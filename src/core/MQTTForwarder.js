@@ -85,7 +85,7 @@ class MQTTForwarder extends EventEmitter {
                     Logger.error(`Failed to forward message to topic ${transformedTopic}:`, error.message);
                     this.emit('forwardError', { topic, error });
                 } else {
-                    Logger.success(`${topic} -> ${transformedTopic}`);
+                    Logger.debug(`${topic} -> ${transformedTopic}`);
                     this.emit('messageForwarded', { originalTopic: topic, targetTopic: transformedTopic });
                 }
             });
